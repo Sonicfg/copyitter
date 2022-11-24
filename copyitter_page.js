@@ -42,7 +42,7 @@ function getData() {
 getData();
 function updateLike(message_id) {
       likes = document.getElementById(message_id).value;
-      updated_likes = Number(likes) + 1;
+      updated_likes = Number(likes) + 1000;
       firebase.database().ref(room_name).child(message_id).update({
             like: updated_likes
       });
